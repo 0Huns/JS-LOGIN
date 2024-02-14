@@ -63,14 +63,17 @@ main{
 
 .message{
     font-size: 0.7rem;
+    font-size: 600;
     display: none;
 }
 
 .message_success{
     display: block;
+    color: #16cb28;
 }
 
 .message_fail{
     display: block;
+    color: #cf1d1d;
 }
 

@@ -1,0 +1,8 @@
+*{
+    font-size: 15px;
+}
+
+#content_box{
+    width: 100%;
+    min-width: 180px;
+}
