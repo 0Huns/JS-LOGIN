@@ -69,11 +69,11 @@ main{
 
 .message_success{
     display: block;
-    color: #16cb28;
+    color: #009E73;
 }
 
 .message_fail{
     display: block;
-    color: #cf1d1d;
+    color: #D55E00;
 }
 

@@ -33,6 +33,9 @@ function emailCondition() {
     if (emailRegex.test(inputEmail.value)) {
         emailConditionMs.classList.remove('message_fail');
         emailSuccessMs.classList.add('message_success');
+    }else if(inputEmail.value === ""){
+        emailConditionMs.classList.remove('message_fail');
+        emailSuccessMs.classList.remove('message_success');
     }else{
         emailConditionMs.classList.add('message_fail');
         emailSuccessMs.classList.remove('message_success');
@@ -40,8 +43,8 @@ function emailCondition() {
 }
 
 inputEmail.addEventListener('focusin', function() {
-    emailConditionMs.classList.remove('message_display');
-    emailSuccessMs.classList.remove('message_display');
+    emailConditionMs.classList.remove('message_fail');
+    emailSuccessMs.classList.remove('message_success');
 });
 
 inputEmail.addEventListener('focusout', emailCondition);
@@ -55,13 +58,13 @@ let pwSuccessMs = document.getElementById("pw_success_ms");
 function pwCondition(){
     let pwRegex = /^(?=.*[A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣])(?=.*[@$!%*#?&])[A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣@$!%*#?&]{8,}$/;
 
-    if (pwRegex.test(inputPw.value)) {
+    if (inputPw.value === "") {
+        pwConditionMs.classList.remove('message_fail');
+        pwSuccessMs.classList.remove('message_success');
+    } else if (pwRegex.test(inputPw.value)) {
         pwConditionMs.classList.remove('message_fail');
         pwSuccessMs.classList.add('message_success');
-    }else if(inputPw.value.length === 0){
-        pwConditionMs.classList.remove('message_success');
-        pwSuccessMs.classList.remove('message_fail');
-    }else{
+    } else {
         pwConditionMs.classList.add('message_fail');
         pwSuccessMs.classList.remove('message_success');
     }
