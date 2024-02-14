@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Project-H_Login</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div id="content_box">
+                <div id="content_title">
+                    WELCOME :&#41;
+                </div>
+                <form id="content_form" action="a.html">
+                    <div class="label_box">
+                        <label class="input_label">
+                            아이디
+                            <input type="text" id="name" placeholder="홍길동" autocomplete="off"
+                            minlength="4" maxlength="12" required>
+                        </label>
+                        <div id="id_success_ms" class="message">사용할 수 있는 아이디입니다.</div>
+                        <div id="id_condition" class="message">아이디는 4~12글자이어야 합니다.</div>
+                    </div>
+                    <div class="label_box">
+                        <label class="input_label">
+                            이메일
+                            <input type="email" id="email" placeholder="projectH@gmail.com" autocomplete="off" required>
+                        </label>
+                        <div id="email_success_ms" class="message">유효한 이메일입니다.</div>
+                        <div id="email_condition" class="message">유효하지 않은 이메일입니다.</div>
+                    </div>  
+                    <div class="label_box">
+                        <label class="input_label">
+                            비밀번호
+                            <input type="password" id="password" required>
+                        </label>
+                        <div id="pw_success_ms" class="message">안전한 암호입니다.</div>
+                        <div id="pw_condition" class="message">안전하지 않은 암호입니다.</div>
+                    </div>
+                    <div class="label_box">
+                        <label class="input_label">
+                            비밀번호 확인
+                            <input type="password" id="confilm_password" required>
+                        </label>
+                        <div id="pw2_success_ms" class="message">일치합니다.</div>
+                        <div id="pw2_condition" class="message">일치하지 않습니다.</div>
+                    </div>
+                    <div class="label_box">
+                        <label class="input_label">
+                            휴대폰 번호
+                            <input type="tel" id="phone" maxlength="13" placeholder="010-XXXX-XXXX" autocomplete="off" required>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit_btn">제출</button>
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="javascript.js"></script>
+    </body>
+</html>
