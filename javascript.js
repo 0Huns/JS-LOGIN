@@ -56,7 +56,7 @@ let pwConditionMs = document.getElementById("pw_condition");
 let pwSuccessMs = document.getElementById("pw_success_ms");
 
 function pwCondition(){
-    let pwRegex = /^(?=.*[A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣])(?=.*[@$!%*#?&])[A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣@$!%*#?&]{8,}$/;
+    let pwRegex = /^(?=.*[A-Za-zㄱ-ㅎㅏ-ㅣ가-힣])(?=.*[0-9])(?=.*[@$!%*#?&])[A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣@$!%*#?&]{8,}$/;
 
     if (inputPw.value === "") {
         pwConditionMs.classList.remove('message_fail');
