@@ -5,4 +5,13 @@
 #content_box{
     width: 100%;
     min-width: 180px;
+    box-shadow: #000000 0px 0px 0px 2px inset,
+    #ffffff 0px -10px 0px -3px,
+    #333333 0px -10px,
+    #ffffff 0px -20px 0px -3px, 
+    #666666 0px -20px, 
+    #ffffff 0px -30px 0px -3px, 
+    #999999 0px -30px, 
+    #ffffff 0px -40px 0px -3px, 
+    #cccccc 0px -40px;
 }

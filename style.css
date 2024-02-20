@@ -13,17 +13,28 @@ main{
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
 }
 
 #content_box{
     display: inline-block;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff00;
     border-radius: 20px;
+    margin: auto;
     padding: 1.5rem 1.5rem;
     width: 50%;
     height: auto;
     max-width: 700px;
     min-width: 400px;
+    box-shadow: #000000 0px 0px 0px 2px inset, 
+    #ffffff 10px -10px 0px -3px, 
+    #333333 10px -10px, 
+    #ffffff 20px -20px 0px -3px, 
+    #666666 20px -20px, 
+    #ffffff 30px -30px 0px -3px, 
+    #999999 30px -30px, 
+    #ffffff 40px -40px 0px -3px,
+    #cccccc 40px -40px;
 }
 
 #content_title{
@@ -42,7 +53,17 @@ main{
             border-radius: 10px;
             padding-left: 0.3rem;
             height: 2rem;
+            box-shadow: 3px -2px 1px 1px #a7a7a7;
         }
+}
+
+#red_input{
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #c63702 inset, 
+    0 0 0 2px rgba(255,255,255,0.15) inset, 
+    3px -2px 0 0 #ff1900, 
+    3px -2px 0 1px rgba(0,0,0,0.4), 
+    3px -2px 8px 1px rgba(0,0,0,0.5);
 }
 
 #content_form{
@@ -50,14 +71,31 @@ main{
     flex-direction: column;
 
         #submit_btn{
-            margin-top: 1rem;
+            margin-top: 2rem;
             height: 2rem;
             border: 1px solid #727272;
             border-radius: 10px;
-            background-color: #dbdbdb;
+            transform: translate3d(-3px,2px,0);
+            background-color: #9c9c9c;
+            box-shadow: 0 0 0 1px #5c5c5c inset, 
+            0 0 0 2px rgba(255,255,255,0.15) inset, 
+            3px -2px 0 0 #646464, 
+            3px -2px 0 1px rgba(0,0,0,0.4),
+            3px -2px 8px 1px rgba(0,0,0,0.5);
         }
         #submit_btn:hover{
-            background-color: #b1b1b1;
+        background-color: #e74c3c;
+        box-shadow:  0 0 0 1px #c63702 inset, 
+        0 0 0 2px rgba(255,255,255,0.15) inset, 
+        3px -2px 0 0 #C24032, 
+        3px -2px 0 1px rgba(0,0,0,0.4), 
+        3px -2px 8px 1px rgba(0,0,0,0.5);
+        }
+        #submit_btn:active{
+            transform: translateY(0px);
+            box-shadow: 0 0 0 1px #c63702 inset,
+            0 0 0 2px rgba(255,255,255,0.15) inset,
+            0 0 0 1px rgba(0,0,0,0.4);
         }
 }
 

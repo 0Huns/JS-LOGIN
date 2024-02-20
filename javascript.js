@@ -17,6 +17,7 @@ function idCondition(){
     }else{
         idConditionMs.classList.remove('message_fail');
         idSuccessMs.classList.add('message_success');
+        inputId.id = 'name';
     }
 }
 
@@ -33,6 +34,7 @@ function emailCondition() {
     if (emailRegex.test(inputEmail.value)) {
         emailConditionMs.classList.remove('message_fail');
         emailSuccessMs.classList.add('message_success');
+        inputEmail.id = 'email';
     }else if(inputEmail.value === ""){
         emailConditionMs.classList.remove('message_fail');
         emailSuccessMs.classList.remove('message_success');
@@ -64,6 +66,7 @@ function pwCondition(){
     } else if (pwRegex.test(inputPw.value)) {
         pwConditionMs.classList.remove('message_fail');
         pwSuccessMs.classList.add('message_success');
+        inputPw.id = 'password';
     } else {
         pwConditionMs.classList.add('message_fail');
         pwSuccessMs.classList.remove('message_success');
@@ -84,6 +87,7 @@ function pw2Condition(){
     if(inputPw.value === inputPw2.value){
         pw2ConditionMs.classList.remove('message_fail');
         pw2SuccessMs.classList.add('message_success');
+        inputPw2.id = 'confilm_password';
     }else{
         pw2ConditionMs.classList.add('message_fail');
         pw2SuccessMs.classList.remove('message_success');
@@ -124,7 +128,23 @@ function submitForm(event) {
         window.location.href = "a.html";
     } else {
         event.preventDefault();
-        alert('no');
+        
+        if (!idSuccessMs.classList.contains('message_success')) {
+            idConditionMs.classList.add('message_fail');
+            inputId.id = 'red_input';
+        }
+        if (!emailSuccessMs.classList.contains('message_success')) {
+            emailConditionMs.classList.add('message_fail');
+            inputEmail.id = 'red_input';
+        }
+        if (!pwSuccessMs.classList.contains('message_success')) {
+            pwConditionMs.classList.add('message_fail');
+            inputPw.id = 'red_input';
+        }
+        if (!pw2SuccessMs.classList.contains('message_success')) {
+            pw2ConditionMs.classList.add('message_fail');
+            inputPw2.id = 'red_input';
+        }
     }
 }
 
