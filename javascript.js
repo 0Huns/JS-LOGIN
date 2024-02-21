@@ -127,6 +127,9 @@ function checkAllConditions() {
 function submitForm(event) {
     if (checkAllConditions()) {
         window.location.href = "a.html";
+
+        let userInfo = { id: inputId.value, pwd: inputPw.value ,email: inputEmail.value}
+        localStorage.setItem("userInfo", JSON.stringify(userInfo));
     } else {
         event.preventDefault();
         
