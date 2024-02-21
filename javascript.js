@@ -74,6 +74,7 @@ function pwCondition(){
     //비밀번호 변경 시 중복 확인 메시지 삭제
     pw2ConditionMs.classList.remove('message_fail');
     pw2SuccessMs.classList.remove('message_success');
+    inputPw2.value = null;
 }
 
 inputPw.addEventListener('input',pwCondition);
