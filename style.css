@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-input, textarea, button {
+input, button {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
