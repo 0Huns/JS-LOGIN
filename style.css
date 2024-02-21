@@ -7,6 +7,15 @@
     box-sizing: border-box;
 }
 
+input, textarea, button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
 main{
     display: flex;
     width: 100vw;
